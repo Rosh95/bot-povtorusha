@@ -1,18 +1,18 @@
 # Конфигурация для Amvera Cloud
-# Документация: https://amvera.ru/
+# Документация: https://docs.amvera.ru/applications/configuration/config-file.html
 
-name: bot-povtorusha
-runtime: nodejs18
-entrypoint: node index.js
+# Обязательная секция meta
+meta:
+  environment: nodejs-server
+  toolchain:
+    name: nodejs
+    version: 18
+
+# Секция run - параметры запуска приложения
+run:
+  command: node
+  args: index.js
 
 # Переменные окружения (устанавливаются в интерфейсе Amvera)
-# BOT_TOKEN - токен Telegram бота
+# BOT_TOKEN - токен Telegram бота (СЕКРЕТ!)
 # TIMEZONE - часовой пояс (по умолчанию Europe/Moscow)
-
-# Ресурсы
-resources:
-  memory: 512Mi
-  cpu: 0.5
-
-# Автоматический перезапуск при сбоях
-restartPolicy: always

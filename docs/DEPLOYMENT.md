@@ -277,15 +277,22 @@ heroku logs --tail
 Создайте файл `amvera.yaml` в корне проекта (уже создан):
 
 ```yaml
-name: bot-povtorusha
-runtime: nodejs18
-entrypoint: node index.js
+# Обязательная секция meta
+meta:
+  environment: nodejs-server
+  toolchain:
+    name: nodejs
+    version: 18
 
-resources:
-  memory: 512Mi
-  cpu: 0.5
+# Секция build
+build:
+  args: ""
 
-restartPolicy: always
+# Секция run - параметры запуска
+run:
+  command: node
+  args: index.js
+  containerPort: 3000
 ```
 
 ### Шаг 5: Настройка переменных окружения
