@@ -3,15 +3,14 @@
 
 # Обязательная секция meta
 meta:
-  environment: nodejs-server
+  environment: node
   toolchain:
-    name: nodejs
+    name: npm
     version: 18
 
 # Секция run - параметры запуска приложения
 run:
-  command: node
-  args: index.js
+  scriptName: index.js
 
 # Переменные окружения (устанавливаются в интерфейсе Amvera)
 # BOT_TOKEN - токен Telegram бота (СЕКРЕТ!)
