@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+.env
+*.db
+*.db-journal
+*.log
+.git
+.gitignore
+README.md
+docs
+scripts
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

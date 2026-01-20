@@ -1,0 +1,27 @@
+{
+  "name": "bot-povtorusha",
+  "version": "1.0.0",
+  "description": "Вопрос Дня от Повторюши",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "add-question": "node scripts/add-question.js",
+    "validate": "node scripts/validate-questions.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "ege",
+    "education"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "better-sqlite3": "^11.0.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.4.5"
+  }
+}
